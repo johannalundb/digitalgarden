@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Digital Garden</title>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+
+    <!-- import the webpage's stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/reset.css">
+
+
+    <!-- import the webpage's javascript file -->
+    <script src="js/jquery-3.3.1.min.js" defer></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    
+    <script type="text/javascript" src="js/iscroll.js"></script>
+
+  </head>  
+
+  <body>
+    <body id="body" onload="loaded()">
+      <script>
+        document.body.className = 'fade';
+      </script>
+
+      
+
+      <div id="wrapper" class="block"><div id="scroller"></div></div>
+
+      <div class="block" id="layer02"> <!-- faster scroll-->
+        <div style="position: absolute; width: 10000px; height: 10000px;">
+          <img style="position:absolute;top:2000px;left:200px;width:1500px;" src="assets/objects/test-blomma1.png">
+          <img style="position:absolute;top:1000px;left:200px;width:1500px;" src="assets/objects/cloud.png">
+        </div>     
+      </div>
+
+      <div class="block" id="layer01"> <!-- slow scroll-->
+        <div style="position: absolute; width: 10000px; height: 10000px;">
+          <img style="position:absolute;top:900px;left:100px;width:100px;" src="assets/objects/test-blomma1.png">
+          <img style="position:absolute;top:2000px;left:1900px;width:1400px;" src="assets/objects/pearl_water_shadow.png" >
+          <img style="position:absolute;top:3000px;left:300px;width:2500px;" src="assets/objects/fountain_1.png">
+          
+        </div>
+      </div>
+
+      <div class="block" id="background">
+          <img src="assets/background/background-test-03-03.jpg">
+      </div>
+
+      <div id="menu">
+        <div id="sound-button">
+          <a id="sound-on" href="#">mute sound</a>
+          <a id="sound-off" href="#">play sound</a>
+        </div>
+        <a id="show-info" href="#">info</a>
+      </div>
+
+      <div id="info-box">
+        <p id="x-button">x</p>
+        <p>Digital garden is an interpretation of the garden as a website, with the goal to create an experience of nature with synthetic materials in a digital space. Objects are added by time when new ideas come. Different scroll speeds creates an illusion of depth. Water created with manipulated free stock photos and music changing depending on the position of the visitor. 
+        Created by <a href="https://www.johannalundberg.nu" target="_blank"> Johanna Lundberg</a> with music by Lithe & Free </p>
+        <ol>
+          <li>Fountains
+            <ol>
+              <li><a href="">The Fountain of Lilies</a></li>
+              <li><a href="">The Fountain of Sunsets</a></li>
+              <li><a href="">The Fountain of Melancholia</a></li>
+            </ol>
+          </li>
+          <li><a href="">Liquid Shell with Pearls</a></li>
+          <li>Flowers <!--för en nedre listsektion placeras sluttaggen nedanför den nedre sektionen-->
+            <ol>
+              <li><a href="">Lorem</a></li>
+              <li><a href="">Lilith</a></li>
+              <li><a href="">Venus</a></li>
+            </ol>
+          </li>
+        </ol>
+        
+      </div>
+      <div id="copyright"><a href="https://www.johannalundberg.nu" target="_blank">&copy; Digital Garden by Johanna Lundberg 2019</a></div>
+
+      <audio id="music" src="assets/sound/Instrumental.mp3" controls preload loop autoplay playsinline></audio>
+      <script src="js/script.js" defer></script>
+      <script>
+        document.addEventListener("DOMContentLoaded", function(e) {
+        document.body.className = '';
+        });</script><!--transition-->
+
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+
