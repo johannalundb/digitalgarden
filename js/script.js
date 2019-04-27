@@ -172,10 +172,6 @@ $(document).ready(function(){
       $("#show-info").removeClass("active");
     }
   });
-    // $("#info-box").click(function(){
-    //   $("#info-box").hide();
-    //   $("#show-info").removeClass("active");
-    // })
 
   $("#sound-on").click(function(){
     $("#sound-on").hide();
@@ -189,31 +185,4 @@ $(document).ready(function(){
     $("#sound-on").show();
     jQuery('music').prop("muted", true);
   });
-
-  // XXX terrible broken, remove?
-  // document.addEventListener('touchmove', function (e) { e.preventDefault(); }, isPassive() ? {
-  //   capture: false,
-  //   passive: false
-  // } : false);
 });
-
-//sound
-// document.onclick = function() {};
-
-// window.onload = function() {
-//     var audioMusic = document.querySelector('#music');
-//     audioMusic.volume = 0;
-// 
-//     window.addEventListener('scroll', function(event) {
-//         var scrollX = this.scrollX;
-//         var scrollY = this.scrollY;
-// 
-//         if (scrollX > 100 && scrollX < 400 && scrollY > 100 && scrollY < 300) {
-//             audioMusic.volume = 1;
-//         } else {
-//             audioMusic.volume = 0;
-//         }
-// 
-//         console.log(scrollX, scrollY);
-//     });
-// };
