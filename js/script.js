@@ -59,11 +59,11 @@ var audio = function () {
       func();
   };
 
-  var findClosestBox = function (x, y) {
+  var findClosestPoint = function (x, y) {
     var minDelta = Number.MAX_VALUE;
     var minSrc = null;
 
-    console.log('findClosestBox: x='+ x + ', y=' + y);
+    console.log('findClosestPoint: x='+ x + ', y=' + y);
 
     for (var i = 0; i < points.length; i++) {
       var deltaX = x - points[i].x;
@@ -91,7 +91,7 @@ var audio = function () {
   };
 
   var setTrack = function (x, y) {
-    var src = findClosestBox(x, y);
+    var src = findClosestPoint(x, y);
 
     if (src != null) {
       audioStart(src);
