@@ -21,6 +21,7 @@ var audio = function () {
       console.log('audioStart: src=' + src);
 
       audioElement.src = src;
+      audioElement.volume = 1;
       audioElement.load();
       audioElement.oncanplaythrough = audioElement.play();
       curAudioSrc = src;
@@ -30,9 +31,25 @@ var audio = function () {
   var audioStop = function (func) {
     if (curAudioSrc !== null) {
       console.log('audioStop: src=' + curAudioSrc);
-      audioElement.pause();
-      audioElement.currentTime = 0;
-      curAudioSrc = null;
+
+      // Lower the volume down to zero in steps of 0.1 every 200ms, then invoke
+      // the callback letting another audio src play.
+      var volTimo = setInterval(function () {
+        console.log('volTimo: volume=' + audioElement.volume);
+        if (audioElement.volume > 0.1) {
+          audioElement.volume -= 0.1;
+        } else {
+          clearInterval(volTimo);
+
+          audioElement.pause();
+          audioElement.currentTime = 0;
+          curAudioSrc = null;
+
+          func();
+        }
+      }, 200);
+
+      return;
     }
 
     if (func)
@@ -83,6 +100,9 @@ var audio = function () {
   obj.ready = function (iscroll) {
     audioElement = $("#audio-box")[0];
     iscroll.on('scrollEnd', onScrollEnd);
+
+    // Start playing the closest audio immediately.
+    onScrollEnd.apply(iscroll);
   };
 
   return obj;
