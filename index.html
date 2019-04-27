@@ -29,16 +29,22 @@
 
       <div class="block" id="layer02"> <!-- faster scroll-->
         <div style="position: absolute; width: 10000px; height: 10000px;">
-          <img id="target-fountain-lilies" style="position:absolute;top:2000px;left:200px;width:1500px;" src="assets/objects/test-blomma1.png">
-          <img style="position:absolute;top:1000px;left:200px;width:1500px;" src="assets/objects/cloud.png">
+          <img
+            class="audio-box"
+            id="target-fountain-lilies"
+            data-audio-src="test.mp3"
+            style="position: absolute; top: 2000px; left: 200px; width: 1500px;"
+            src="assets/objects/test-blomma1.png" />
+
+          <img class="audio-box" id="target-cloud" style="position:absolute;top:1000px;left:200px;width:1500px;" src="assets/objects/cloud.png">
         </div>     
       </div>
 
       <div class="block" id="layer01"> <!-- slow scroll-->
         <div style="position: absolute; width: 10000px; height: 10000px;">
-          <img style="position:absolute;top:900px;left:100px;width:100px;" src="assets/objects/test-blomma1.png">
-          <img style="position:absolute;top:2000px;left:1900px;width:1400px;" src="assets/objects/pearl_water_shadow.png" >
-          <img style="position:absolute;top:3000px;left:300px;width:2500px;" src="assets/objects/fountain_1.png">
+          <img class="audio-box" id="target-blomma" style="position:absolute;top:900px;left:100px;width:100px;" src="assets/objects/test-blomma1.png">
+          <img class="audio-box" id="target-pearl-water-shadow" style="position:absolute;top:2000px;left:1900px;width:1400px;" src="assets/objects/pearl_water_shadow.png" >
+          <img class="audio-box" id="target-fountain" style="position:absolute;top:3000px;left:300px;width:2500px;" src="assets/objects/fountain_1.png">
           
         </div>
       </div>
@@ -81,6 +87,9 @@
       <div id="copyright"><a href="https://www.johannalundberg.nu" target="_blank">&copy; Digital Garden by Johanna Lundberg 2019</a></div>
 
       <audio id="music" src="assets/sound/Instrumental.mp3" controls preload loop autoplay playsinline></audio>
+
+      <audio id="audio-box" src="" controls loop autoplay></audio>
+
       <script src="js/script.js" defer></script>
       <script>
         document.addEventListener("DOMContentLoaded", function(e) {
@@ -89,13 +98,3 @@
 
   </body>
 </html>
-
-
-
-
-
-
-
-
-
-
