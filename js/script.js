@@ -2,8 +2,11 @@ var audio = function () {
   /* Exported object. */
   var obj = {};
 
-  /* Boxes with audio sources. */
-  var boxes = [
+  /*
+   * Points with audio sources, the closest point relative to the current
+   * viewport will be played.
+   */
+  var points = [
     {x: -3000, y: -3000, src: "assets/sound/background-crickets.mp3"},
     {x: -3000, y: -7000, src: "assets/sound/background-birds.mp3"},
   ];
@@ -62,13 +65,13 @@ var audio = function () {
 
     console.log('findClosestBox: x='+ x + ', y=' + y);
 
-    for (var i = 0; i < boxes.length; i++) {
-      var deltaX = x - boxes[i].x;
-      var deltaY = y - boxes[i].y;
+    for (var i = 0; i < points.length; i++) {
+      var deltaX = x - points[i].x;
+      var deltaY = y - points[i].y;
       var delta = (deltaX * deltaX) + (deltaY * deltaY);
       if (delta < minDelta) {
         minDelta = delta;
-        minSrc = boxes[i].src;
+        minSrc = points[i].src;
       }
     }
 
