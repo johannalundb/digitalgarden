@@ -26,6 +26,26 @@ $(document).ready(function(){
     }]
   });
 
+  $(".smooth-scroll").click(function () {
+    var targetName = this.hash;
+    var target = $(targetName);
+
+    // Sanity check, verify that the scroll destination exists.
+    if (target.length === 0) {
+      console.error("smooth scroll target " + targetName + " does not exists");
+      return;
+    }
+
+    // Target exists, lets go scrolling.
+    // The animation easing could either be: quadratic, circular, back, bounce, elastic.
+    myScroll.scrollToElement(
+      destination         = target[0],
+      animationDurationMs = 1000,
+      targetOffsetX       = 0,
+      targetOffsetY       = 0,
+      animationEasing     = IScroll.utils.ease.back);
+  });
+
   $("#show-info").click(function(){
     if ($("#info-box").is(':hidden')) {
         $("#info-box").show();
