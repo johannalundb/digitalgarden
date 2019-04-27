@@ -2,81 +2,86 @@ var audio = function () {
   /* Exported object. */
   var obj = {};
 
-  /* Internal variables. */
+  /* Boxes with audio sources. */
+  var boxes = [
+    {x: -3000, y: -3000, src: "assets/sound/background-crickets.mp3"},
+    {x: -3000, y: -7000, src: "assets/sound/background-birds.mp3"},
+  ];
+
+  /* Other internal variables. */
   var audioElement = null;
-  var boxes = {};
   var curAudioSrc = null;
   var timo = -1;
 
   var audioStart = function (src) {
-    console.log('audioStop: src=' + src);
-    console.log('audioStop: curAudioSrc=' + curAudioSrc);
-
-    if (curAudioSrc === src)
+    if (curAudioSrc === src || src === "")
       return;
 
-    audioStop();
-    audioElement.attr("src", src);
-    audioElement.load();
-    audioElement.oncanplaythrough = audioElement.play();
-    curAudioSrc = src;
+    audioStop(function () {
+      console.log('audioStart: src=' + src);
+
+      audioElement.src = src;
+      audioElement.load();
+      audioElement.oncanplaythrough = audioElement.play();
+      curAudioSrc = src;
+    });
   };
 
-  var audioStop = function () {
-    if (curAudioSrc === null)
-      return;
-
-    console.log('audioStop');
-    audioElement.pause();
-    audioElement.currentTime = 0;
-    curAudioSrc = null;
-  };
-
-
-  var findBoxInViewport = function (bottom, top) {
-    for (var key in boxes) {
-      if (bottom > boxes[key].top && top < boxes[key].bottom)
-        return key;
+  var audioStop = function (func) {
+    if (curAudioSrc !== null) {
+      console.log('audioStop: src=' + curAudioSrc);
+      audioElement.pause();
+      audioElement.currentTime = 0;
+      curAudioSrc = null;
     }
-    return null;
+
+    if (func)
+      func();
+  };
+
+  var findClosestBox = function (x, y) {
+    var minDelta = Number.MAX_VALUE;
+    var minSrc = null;
+
+    console.log('findClosestBox: x='+ x + ', y=' + y);
+
+    for (var i = 0; i < boxes.length; i++) {
+      var deltaX = x - boxes[i].x;
+      var deltaY = y - boxes[i].y;
+      var delta = (deltaX * deltaX) + (deltaY * deltaY);
+      if (delta < minDelta) {
+        minDelta = delta;
+        minSrc = boxes[i].src;
+      }
+    }
+
+    return minSrc;
   };
 
   var onScrollEnd = function () {
+    var x = this.x;
+    var y = this.y;
+
     if (timo >= 0)
       clearTimeout(timo);
-    timo = setTimeout(setTrack, 500);
+
+    timo = setTimeout(function () {
+      setTrack(x, y);
+    }, 500);
   };
 
-  var setTrack = function () {
-    var viewportTop = $(window).scrollTop();
-    var viewportBottom = $(window).scrollTop() + $(window).innerHeight();
+  var setTrack = function (x, y) {
+    var src = findClosestBox(x, y);
 
-    console.log('top:    ' + viewportTop);
-    console.log('bottom: ' + viewportBottom);
-
-    var boxKey = findBoxInViewport(viewportBottom, viewportTop);
-
-    console.log('box: ' + boxKey);
-
-    if (boxKey != null) {
-      var box = boxes[boxKey];
-      audioStart(box.src);
+    if (src != null) {
+      audioStart(src);
     } else {
       audioStop();
     }
   };
 
   obj.ready = function (iscroll) {
-    audioElement = $("#audio-box");
-
-    $(".audio-box").each(function () {
-      boxes[this.id] = {
-        top:    $(this).offset().top,
-        bottom: $(this).offset().top + $(this).outerHeight(),
-        src:    $(this).data("audio-src"),
-      };
-    });
-
+    audioElement = $("#audio-box")[0];
     iscroll.on('scrollEnd', onScrollEnd);
   };
 
