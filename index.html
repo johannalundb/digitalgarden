@@ -28,18 +28,27 @@
       <div id="wrapper" class="block"><div id="scroller"></div></div>
 
       <div class="block" id="layer02"> <!-- faster scroll-->
-        <div style="position: absolute; width: 10000px; height: 10000px;">
-          <img id="target-fountain-lilies" style="position: absolute; top: 2000px; left: 200px; width: 1500px;" src="assets/objects/test-blomma1.png" /> 
-          <img id="target-cloud" style="position:absolute;top:1000px;left:200px;width:1500px;" src="assets/objects/cloud.png">
+        <div style="width: 100000px; height: 100000px;">
+          <img class="up-down-animation" style="top: 2000px; left: 200px; width: 1500px;" src="assets/objects/test-blomma1.png" /> 
+
+          <div id="target-fountain-of-shells" class="target-block" style="top: 6000px; left:6000px;"></div> <!--TARGET FOUNTAIN OF SHELLS-->
+          <img style="top: 6000px; left: 6000px; width: 2000px;" src="assets/objects/fountain-of-shells.png" /> 
+
         </div>     
       </div>
 
       <div class="block" id="layer01"> <!-- slow scroll-->
-        <div style="position: absolute; width: 10000px; height: 10000px;">
-          <img id="target-blomma" style="position:absolute;top:900px;left:100px;width:100px;" src="assets/objects/test-blomma1.png">
-          <img id="target-pearl-water-shadow" style="position:absolute;top:2000px;left:1900px;width:1400px;" src="assets/objects/pearl_water_shadow.png" >
-          <img id="target-fountain" style="position:absolute;top:3000px;left:300px;width:2500px;" src="assets/objects/fountain_1.png">
-          
+        <div style="width: 10000px; height: 10000px;">
+          <img style="top:900px;left:100px;width:100px;" src="assets/objects/test-blomma1.png">
+
+          <div id="target-metal_steam_1" class="target-block" style="top: 2000px; left:3000px;"></div> <!--TARGET METAL STEAM 1-->
+          <img class="up-down-animation" style="top:2000px;left:2900px;width:1400px;" src="assets/objects/metal_steam_1.png">
+          <img class="down-up-animation" style="top:4200px;left:2900px;width:1400px;" src="assets/objects/metal_steam_1_reflection.png">
+
+          <div id="target-fountain-sunsets" class="target-block" style="top: 4000px; left:300px;"></div> <!--TARGET FOUNTAIN OF SUNSETS-->
+          <img style="top:3000px;left:300px;width:2500px;" src="assets/objects/fountain_1.png">
+
+          <img style="top: 6000px; left: 6200px; width: 610px;" src="assets/objects/fountain-of-shells.png" /> 
         </div>
       </div>
 
@@ -49,8 +58,7 @@
 
       <div id="menu">
         <div id="sound-button">
-          <a id="sound-on" href="#">mute sound</a>
-          <a id="sound-off" href="#">play sound</a>
+          <a id="sound-toggle" href="#">play sound</a>
         </div>
         <a id="show-info" href="#">info</a>
       </div>
@@ -58,16 +66,16 @@
       <div id="info-box">
         <p id="x-button">x</p>
         <p>Digital garden is an interpretation of the garden as a website, with the goal to create an experience of nature with synthetic materials in a digital space. Objects are added by time when new ideas come. Different scroll speeds creates an illusion of depth. Water created with manipulated free stock photos and music changing depending on the position of the visitor. 
-        Created by <a href="https://www.johannalundberg.nu" target="_blank"> Johanna Lundberg</a> with music by Lithe & Free </p>
+        Created by <a href="https://www.johannalundberg.nu" target="_blank"> Johanna Lundberg</a> with music by Lithe & Free<br></p>
         <ol>
           <li>Fountains
             <ol>
-              <li><a class="smooth-scroll" href="#target-fountain-lilies">The Fountain of Lilies</a></li>
+              <li><a class="smooth-scroll" href="#target-fountain-of-shells">The Fountain of Shells</a></li>
               <li><a class="smooth-scroll" href="#target-fountain-sunsets">The Fountain of Sunsets</a></li>
               <li><a class="smooth-scroll" href="#target-fountain-melancholia">The Fountain of Melancholia</a></li>
             </ol>
           </li>
-          <li><a href="">Liquid Shell with Pearls</a></li>
+          <li><a class="smooth-scroll" href="#target-metal_steam_1">Liquid Shell with Pearls</a></li>
           <li>Flowers <!--för en nedre listsektion placeras sluttaggen nedanför den nedre sektionen-->
             <ol>
               <li><a href="">Lorem</a></li>
@@ -78,10 +86,10 @@
         </ol>
         
       </div>
-      <div id="copyright"><a href="https://www.johannalundberg.nu" target="_blank">&copy; Digital Garden by Johanna Lundberg 2019</a></div>
+      <div id="copyright"><a href="https://www.johannalundberg.nu" target="_blank">&copy; 2019 Digital Garden by Johanna Lundberg</a></div>
 
       <!-- audio head track -->
-      <audio id="music" src="assets/sound/Instrumental.mp3" controls preload loop autoplay playsinline></audio>
+      <audio id="music" src="assets/sound/Instrumental (Underwater).mp3" controls preload loop playsinline></audio>
 
       <!-- audio element used by script.js -->
       <audio id="audio-box" src="" loop></audio>

@@ -7,17 +7,21 @@ var audio = function () {
    * viewport will be played.
    */
   var points = [
-    {x: -3000, y: -3000, src: "assets/sound/background-crickets.mp3"},
-    {x: -3000, y: -7000, src: "assets/sound/background-birds.mp3"},
+    {x: 0, y: -2000, src: "assets/sound/background-crickets.mp3"},
+    {x: -8159, y: -4741, src: "assets/sound/background-above-water.mp3"},
+    {x: -7000, y: -18000, src: "assets/sound/background-birds.mp3"},
+    {x: -3000, y: -9000, src: "assets/sound/background-below-water.mp3"},
   ];
 
   /* Other internal variables. */
   var audioElement = null;
   var curAudioSrc = null;
   var timo = -1;
+  var _enabled = false;
+  var _iscroll = null;
 
   var audioStart = function (src) {
-    if (curAudioSrc === src || src === "")
+    if (!_enabled || curAudioSrc === src || src === "")
       return;
 
     audioStop(function () {
@@ -48,9 +52,10 @@ var audio = function () {
           audioElement.currentTime = 0;
           curAudioSrc = null;
 
-          func();
+          if (func)
+            func();
         }
-      }, 200);
+      }, 100);
 
       return;
     }
@@ -100,12 +105,19 @@ var audio = function () {
     }
   };
 
-  obj.ready = function (iscroll) {
-    audioElement = $("#audio-box")[0];
-    iscroll.on('scrollEnd', onScrollEnd);
+  obj.toggle = function (func) {
+    _enabled = !_enabled;
+    if (_enabled)
+      onScrollEnd.apply(_iscroll);
+    else
+      audioStop();
+    func(_enabled);
+  };
 
-    // Start playing the closest audio immediately.
-    onScrollEnd.apply(iscroll);
+  obj.ready = function (iscroll) {
+    _iscroll = iscroll;
+    audioElement = $("#audio-box")[0];
+    _iscroll.on('scrollEnd', onScrollEnd);
   };
 
   return obj;
@@ -122,8 +134,8 @@ $(document).ready(function(){
       el: document.getElementById('layer01'),
       resize: false,
       ignoreBoundaries: true,
-      speedRatioY: 0.6,
-      speedRatioX: 0.6
+      speedRatioY: 0.5,
+      speedRatioX: 0.5
     }, {
       el: document.getElementById('layer02'),
       resize: false,
@@ -142,7 +154,7 @@ $(document).ready(function(){
   // Start audio.
   audio.ready(myScroll);
 
-  $(".smooth-scroll").click(function () {
+  $(".smooth-scroll").click(function (e) {
     var targetName = this.hash;
     var target = $(targetName);
 
@@ -156,10 +168,12 @@ $(document).ready(function(){
     // The animation easing could either be: quadratic, circular, back, bounce, elastic.
     myScroll.scrollToElement(
       destination         = target[0],
-      animationDurationMs = 1000,
-      targetOffsetX       = 0,
-      targetOffsetY       = 0,
-      animationEasing     = IScroll.utils.ease.back);
+      animationDurationMs = 2000,
+      targetOffsetX       = 2000,
+      targetOffsetY       = 2500,
+      animationEasing     = IScroll.utils.ease.circular);
+
+    e.preventDefault();
   });
 
   $("#show-info").click(function(){
@@ -173,16 +187,17 @@ $(document).ready(function(){
     }
   });
 
-  $("#sound-on").click(function(){
-    $("#sound-on").hide();
-    $("#sound-off").show();
-    // $("music").prop('muted', false);
-    jQuery('music').prop("muted", true);
-  });
-
-  $("#sound-off").click(function(){
-    $("#sound-off").hide();
-    $("#sound-on").show();
-    jQuery('music').prop("muted", true);
+  $("#sound-toggle").click(function(){
+    var button = $(this);
+    var mainTrack = $("#music")[0];
+    audio.toggle(function (on) {
+      if (on) {
+        mainTrack.play();
+        button.text("mute sound");
+      } else {
+        mainTrack.pause();
+        button.text("play sound");
+      }
+    });
   });
 });
