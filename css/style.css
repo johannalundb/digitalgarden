@@ -5,8 +5,8 @@
 }
 
 :root {
-  --background-width: 10000px;
-  --background-height: 10000px;
+  --background-width: 8000px;
+  --background-height: 8000px;
   --font-color: #000;
 }
 
@@ -161,8 +161,8 @@ body.fade {
 #scroller {
   position: absolute;
   z-index: 4;
-  width: calc(100000*0.4px); /*storleken på sidan*0.4 (scroll-hastighet)*/
-  height: calc(100000*0.4px);
+  width: 17400px; /*storleken på sidan*0.4 (scroll-hastighet)*/
+  height: 15000px;
   overflow: hidden;
 }
 
