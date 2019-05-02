@@ -45,7 +45,7 @@ body.fade {
   right: 0;
   z-index: 4;
   text-align: left;
-  margin: 10px 15px 15px 0;
+  margin: 10px 15px 11px 0;
 }
 
   #menu a {
@@ -74,7 +74,7 @@ body.fade {
 
   #info-box {
     position: absolute;
-    width: 300px;
+    width: 280px;
     height:auto;
     background: rgba(255,255,255, 0.6);
     z-index:4;
@@ -86,7 +86,6 @@ body.fade {
     #info-box p {
       font-family: 'Oroban-Masuria';
       font-size: 13pt;
-      padding-bottom: 15px;
       line-height: 15pt;
     }
     #info-box li {
@@ -99,6 +98,10 @@ body.fade {
       position: absolute;
       right: 15px;
       display: none;
+    }
+
+    .text-indent {
+      text-indent: 0.7em;
     }
 
     ol {
@@ -142,7 +145,7 @@ body.fade {
 }
   #copyright a {
     font-family: 'Oroban-Masuria';
-    font-size: 13pt;
+    font-size: 11pt;
   }
 /* info-box, menu, copyright end*/
 
