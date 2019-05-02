@@ -125,8 +125,8 @@ var audio = function () {
 
 $(document).ready(function(){
   var myScroll = new IScroll('#wrapper', {
-    startY: -3000,
-    startX: -3000,
+    startY: -7000,
+    startX: -7300,
     scrollY: true,
     scrollX: true,
     mouseWheel: true,
