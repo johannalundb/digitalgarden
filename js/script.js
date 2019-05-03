@@ -169,7 +169,7 @@ $(document).ready(function(){
     myScroll.scrollToElement(
       destination         = target[0],
       animationDurationMs = 2000,
-      targetOffsetX       = 2000,
+      targetOffsetX       = 1500,
       targetOffsetY       = 2500,
       animationEasing     = IScroll.utils.ease.circular);
 
@@ -187,16 +187,29 @@ $(document).ready(function(){
     }
   });
 
+  $("#show-embroidery").click(function(){
+    if ($("#embroidery").is(':hidden')) {
+        $("#embroidery").show();
+        $("#show-embroidery").addClass("active");
+        // $("#info-box").hide();
+    }
+    else {
+      $("#embroidery").hide();
+      $("#show-embroidery").removeClass("active");
+    }
+  });
+
+
   $("#sound-toggle").click(function(){
     var button = $(this);
     var mainTrack = $("#music")[0];
     audio.toggle(function (on) {
       if (on) {
         mainTrack.play();
-        button.text("mute sound");
+        button.text("Mute sound");
       } else {
         mainTrack.pause();
-        button.text("play sound");
+        button.text("Play sound");
       }
     });
   });
