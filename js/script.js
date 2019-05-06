@@ -125,31 +125,35 @@ var audio = function () {
 
 $(document).ready(function(){
   var myScroll = new IScroll('#wrapper', {
-    startY: -7000,
-    startX: -7300,
+    probeType: 3,
+    startY: -6682,
+    startX: -10794,
     scrollY: true,
     scrollX: true,
     mouseWheel: true,
+    freeScroll: true,
+    tap: true,
     indicators: [{
       el: document.getElementById('layer01'),
-      resize: false,
-      ignoreBoundaries: true,
-      speedRatioY: 0.5,
-      speedRatioX: 0.5
-    }, {
-      el: document.getElementById('layer02'),
       resize: false,
       ignoreBoundaries: true,
       speedRatioY: 0.8,
       speedRatioX: 0.8
     }, {
+      el: document.getElementById('layer02'),
+      resize: false,
+      ignoreBoundaries: true,
+      speedRatioY: 1,
+      speedRatioX: 1
+    }, {
       el: document.getElementById('background'),
       resize: false,
       ignoreBoundaries: true,
-      speedRatioY: 0.4,
-      speedRatioX: 0.4
+      speedRatioY: 0.6,
+      speedRatioX: 0.6
     }]
   });
+
 
   // Start audio.
   audio.ready(myScroll);
@@ -169,8 +173,8 @@ $(document).ready(function(){
     myScroll.scrollToElement(
       destination         = target[0],
       animationDurationMs = 2000,
-      targetOffsetX       = 1500,
-      targetOffsetY       = 2500,
+      targetOffsetX       = 0,
+      targetOffsetY       = 0,
       animationEasing     = IScroll.utils.ease.circular);
 
     e.preventDefault();

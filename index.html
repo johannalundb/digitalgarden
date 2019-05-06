@@ -15,7 +15,7 @@
     <script src="js/jquery-3.3.1.min.js" defer></script>
     <script src="https://unpkg.com/scrollreveal"></script>
     
-    <script type="text/javascript" src="js/iscroll.min.js"></script>
+    <script type="text/javascript" src="js/iscroll-probe.js"></script>
 
   </head>  
 
@@ -29,154 +29,214 @@
 
       <div class="block" id="layer02"> <!-- faster scroll-->
         <div style="width: 100000px; height: 100000px;">
-          <img class="up-down-animation" style="top: 2000px; left: 200px; width: 1500px;" src="assets/objects/test-blomma1.png" /> 
-          <div id="target-fountain-of-shells" class="target-block" style="top: 6000px; left:6000px;"></div> <!--TARGET FOUNTAIN OF SHELLS-->
+          <div id="target-fountain-of-shells" class="target-block" style="top: 6000px; left:6000px;"></div>
+           <!--TARGET FOUNTAIN OF SHELLS-->
           <img style="top: 6000px; left: 6000px; width: 2000px;" src="assets/objects/fountain-of-shells.png" /> 
         </div>     
       </div>
 
       <div class="block" id="layer01"> <!-- slow scroll-->
-        <div style="width: 10000px; height: 10000px;">
+        <div style="width: 18000px; height: 10000px;">
+          <div id="fence-block">
+            <div id="fence-top">
+              <img src="assets/background/Fence_corner.png" class="fence-corner">
+              <img src="assets/background/Fence.png" class="fence">
+              <img src="assets/background/Fence.png" class="fence">
+              <img src="assets/background/Fence.png" class="fence">
+              <img src="assets/background/Fence.png" class="fence">
+              <img src="assets/background/Fence.png" class="fence">
+              <img src="assets/background/Fence.png" class="fence">
+              <img src="assets/background/Fence.png" class="fence">
+              <img src="assets/background/Fence.png" class="fence">
+              <img src="assets/background/Fence.png" class="fence">
+              <img src="assets/background/Fence.png" class="fence">
+            </div>
+            <div id="fence-left">
+              <img src="assets/background/Fence.png" class="fence">
+              <img src="assets/background/Fence.png" class="fence">
+              <img src="assets/background/Fence.png" class="fence">
+              <img src="assets/background/Fence.png" class="fence">
+              <img src="assets/background/Fence.png" class="fence">
+              <img src="assets/background/Fence.png" class="fence">
+              <img src="assets/background/Fence.png" class="fence">
+              <img src="assets/background/Fence.png" class="fence">
+              <img src="assets/background/Fence.png" class="fence">
+              <img src="assets/background/Fence.png" class="fence">
+              <img src="assets/background/Fence_corner.png" class="fence-corner">
+            </div>
+            <div id="fence-bottom">
+              <img src="assets/background/Fence.png" class="fence">
+              <img src="assets/background/Fence.png" class="fence">
+              <img src="assets/background/Fence.png" class="fence">
+              <img src="assets/background/Fence.png" class="fence">
+              <img src="assets/background/Fence.png" class="fence">
+              <img src="assets/background/Fence.png" class="fence">
+              <img src="assets/background/Fence.png" class="fence">
+              <img src="assets/background/Fence.png" class="fence">
+              <img src="assets/background/Fence.png" class="fence">
+              <img src="assets/background/Fence.png" class="fence">
+              <img src="assets/background/Fence_corner.png" class="fence-corner">
+            </div>
+            <div id="fence-right">
+              <img src="assets/background/Fence_corner.png" class="fence-corner">
+              <img src="assets/background/Fence.png" class="fence">
+              <img src="assets/background/Fence.png" class="fence">
+              <img src="assets/background/Fence.png" class="fence">
+              <img src="assets/background/Fence.png" class="fence">
+              <img src="assets/background/Fence.png" class="fence">
+              <img src="assets/background/Fence.png" class="fence">
+              <img src="assets/background/Fence.png" class="fence">
+              <img src="assets/background/Fence.png" class="fence">
+              <img src="assets/background/Fence.png" class="fence">
+              <img src="assets/background/Fence.png" class="fence">
+            </div>
+          </div>
 
-          <div id="target-metal_steam_1" class="target-block" style="top: 2000px; left:3000px;"></div> <!--TARGET METAL STEAM 1-->
+           <div id="target-metal_steam_1" class="target-block" style="top: 2000px; left:3000px;"></div> <!--TARGET METAL STEAM 1 -->
           <img class="up-down-animation" style="top:2000px;left:2900px;width:1400px;" src="assets/objects/metal_steam_1.png">
           <img class="down-up-animation" style="top:4200px;left:2900px;width:1400px;" src="assets/objects/metal_steam_1_reflection.png">
 
-          <div id="target-fountain-sunsets" class="target-block" style="top: 4000px; left:300px;"></div> <!--TARGET FOUNTAIN OF SUNSETS-->
+          <!-- <div id="target-fountain-sunsets" class="target-block" style="top: 4000px; left:300px;"></div>  --><!--TARGET FOUNTAIN OF SUNSETS-->
           <img style="top:3000px;left:300px;width:2500px;" src="assets/objects/fountain_1.png">
 
-          <img style="top: 6000px; left: 6200px; width: 610px;" src="assets/objects/fountain-of-shells.png" /> 
+          <img style="top: 6000px; left: 7000px; width: 610px;" src="assets/objects/fountain-of-shells.png" /> 
         </div>
       </div>
 
       <div class="block" id="background">
-
-        <!-- Save for Web Slices (Bakgrund-mash.psb) -->
-          <table id="Table_01" width="18664" height="10867" border="0" cellpadding="0" cellspacing="0">
-            <tr>
-              <td>
-                <img src="images/Bakgrund-mash_01.jpg" width="2333" height="2173" alt=""></td>
-              <td>
-                <img src="images/Bakgrund-mash_02.jpg" width="2333" height="2173" alt=""></td>
-              <td>
-                <img src="images/Bakgrund-mash_03.jpg" width="2333" height="2173" alt=""></td>
-              <td>
-                <img src="images/Bakgrund-mash_04.jpg" width="2333" height="2173" alt=""></td>
-              <td>
-                <img src="images/Bakgrund-mash_05.jpg" width="2333" height="2173" alt=""></td>
-              <td>
-                <img src="images/Bakgrund-mash_06.jpg" width="2333" height="2173" alt=""></td>
-              <td>
-                <img src="images/Bakgrund-mash_07.jpg" width="2333" height="2173" alt=""></td>
-              <td>
-                <img src="images/Bakgrund-mash_08.jpg" width="2333" height="2173" alt=""></td>
-            </tr>
-            <tr>
-              <td>
-                <img src="images/Bakgrund-mash_09.jpg" width="2333" height="2174" alt=""></td>
-              <td>
-                <img src="images/Bakgrund-mash_10.jpg" width="2333" height="2174" alt=""></td>
-              <td>
-                <img src="images/Bakgrund-mash_11.jpg" width="2333" height="2174" alt=""></td>
-              <td>
-                <img src="images/Bakgrund-mash_12.jpg" width="2333" height="2174" alt=""></td>
-              <td>
-                <img src="images/Bakgrund-mash_13.jpg" width="2333" height="2174" alt=""></td>
-              <td>
-                <img src="images/Bakgrund-mash_14.jpg" width="2333" height="2174" alt=""></td>
-              <td>
-                <img src="images/Bakgrund-mash_15.jpg" width="2333" height="2174" alt=""></td>
-              <td>
-                <img src="images/Bakgrund-mash_16.jpg" width="2333" height="2174" alt=""></td>
-            </tr>
-            <tr>
-              <td>
-                <img src="images/Bakgrund-mash_17.jpg" width="2333" height="2173" alt=""></td>
-              <td>
-                <img src="images/Bakgrund-mash_18.jpg" width="2333" height="2173" alt=""></td>
-              <td>
-                <img src="images/Bakgrund-mash_19.jpg" width="2333" height="2173" alt=""></td>
-              <td>
-                <img src="images/Bakgrund-mash_20.jpg" width="2333" height="2173" alt=""></td>
-              <td>
-                <img src="images/Bakgrund-mash_21.jpg" width="2333" height="2173" alt=""></td>
-              <td>
-                <img src="images/Bakgrund-mash_22.jpg" width="2333" height="2173" alt=""></td>
-              <td>
-                <img src="images/Bakgrund-mash_23.jpg" width="2333" height="2173" alt=""></td>
-              <td>
-                <img src="images/Bakgrund-mash_24.jpg" width="2333" height="2173" alt=""></td>
-            </tr>
-            <tr>
-              <td>
-                <img src="images/Bakgrund-mash_25.jpg" width="2333" height="2174" alt=""></td>
-              <td>
-                <img src="images/Bakgrund-mash_26.jpg" width="2333" height="2174" alt=""></td>
-              <td>
-                <img src="images/Bakgrund-mash_27.jpg" width="2333" height="2174" alt=""></td>
-              <td>
-                <img src="images/Bakgrund-mash_28.jpg" width="2333" height="2174" alt=""></td>
-              <td>
-                <img src="images/Bakgrund-mash_29.jpg" width="2333" height="2174" alt=""></td>
-              <td>
-                <img src="images/Bakgrund-mash_30.jpg" width="2333" height="2174" alt=""></td>
-              <td>
-                <img src="images/Bakgrund-mash_31.jpg" width="2333" height="2174" alt=""></td>
-              <td>
-                <img src="images/Bakgrund-mash_32.jpg" width="2333" height="2174" alt=""></td>
-            </tr>
-            <tr>
-              <td>
-                <img src="images/Bakgrund-mash_33.jpg" width="2333" height="2173" alt=""></td>
-              <td>
-                <img src="images/Bakgrund-mash_34.jpg" width="2333" height="2173" alt=""></td>
-              <td>
-                <img src="images/Bakgrund-mash_35.jpg" width="2333" height="2173" alt=""></td>
-              <td>
-                <img src="images/Bakgrund-mash_36.jpg" width="2333" height="2173" alt=""></td>
-              <td>
-                <img src="images/Bakgrund-mash_37.jpg" width="2333" height="2173" alt=""></td>
-              <td>
-                <img src="images/Bakgrund-mash_38.jpg" width="2333" height="2173" alt=""></td>
-              <td>
-                <img src="images/Bakgrund-mash_39.jpg" width="2333" height="2173" alt=""></td>
-              <td>
-                <img src="images/Bakgrund-mash_40.jpg" width="2333" height="2173" alt=""></td>
-            </tr>
-          </table>
-          <!-- End Save for Web Slices -->
-        <!-- <div style="position: absolute;top: 0;left: 0;">
-          <div >
-            <img src="images/Bakgrund-mash_01.jpg" style="width: 1000px;">
-            <img src="images/Bakgrund-mash_02.jpg" style="width: 1000px;">
-            <img src="images/Bakgrund-mash_03.jpg" style="width: 1000px;">
-            <img src="images/Bakgrund-mash_04.jpg" style="width: 1000px;">
-            <img src="images/Bakgrund-mash_05.jpg" style="width: 1000px;">
-            <img src="images/Bakgrund-mash_06.jpg" style="width: 1000px;">
-            <img src="images/Bakgrund-mash_07.jpg" style="width: 1000px;">
-            <img src="images/Bakgrund-mash_08.jpg" style="width: 1000px;">
+        <div style="width: 11000px; height: 11000px;">
+          <div id="background-row-1" class="background-row">
+            <img src="images/Bakgrund_final_01.jpg">
+            <img src="images/Bakgrund_final_02.jpg">
+            <img src="images/Bakgrund_final_03.jpg">
+            <img src="images/Bakgrund_final_04.jpg">
+            <img src="images/Bakgrund_final_05.jpg">
+            <img src="images/Bakgrund_final_06.jpg">
+            <img src="images/Bakgrund_final_07.jpg">
+            <img src="images/Bakgrund_final_08.jpg">
+            <img src="images/Bakgrund_final_09.jpg">
+            <img src="images/Bakgrund_final_10.jpg">
           </div>
-          <div>
-            <img src="images/Bakgrund-mash_09.jpg" style="width: 1000px;">
-            <img src="images/Bakgrund-mash_10.jpg" style="width: 1000px;">
-            <img src="images/Bakgrund-mash_11.jpg" style="width: 1000px;">
-            <img src="images/Bakgrund-mash_12.jpg" style="width: 1000px;">
-            <img src="images/Bakgrund-mash_13.jpg" style="width: 1000px;">
-            <img src="images/Bakgrund-mash_14.jpg" style="width: 1000px;">
-            <img src="images/Bakgrund-mash_15.jpg" style="width: 1000px;">
-            <img src="images/Bakgrund-mash_16.jpg" style="width: 1000px;">
+          <div id="background-row-2" class="background-row">
+            <img src="images/Bakgrund_final_11.jpg">
+            <img src="images/Bakgrund_final_12.jpg">
+            <img src="images/Bakgrund_final_13.jpg">
+            <img src="images/Bakgrund_final_14.jpg">
+            <img src="images/Bakgrund_final_15.jpg">
+            <img src="images/Bakgrund_final_16.jpg">
+            <img src="images/Bakgrund_final_17.jpg">
+            <img src="images/Bakgrund_final_18.jpg">
+            <img src="images/Bakgrund_final_19.jpg">
+            <img src="images/Bakgrund_final_20.jpg">
           </div>
-        </div> -->
+          <div id="background-row-3" class="background-row">
+            <img src="images/Bakgrund_final_21.jpg">
+            <img src="images/Bakgrund_final_22.jpg">
+            <img src="images/Bakgrund_final_23.jpg">
+            <img src="images/Bakgrund_final_24.jpg">
+            <img src="images/Bakgrund_final_25.jpg">
+            <img src="images/Bakgrund_final_26.jpg">
+            <img src="images/Bakgrund_final_27.jpg">
+            <img src="images/Bakgrund_final_28.jpg">
+            <img src="images/Bakgrund_final_29.jpg">
+            <img src="images/Bakgrund_final_30.jpg">
+          </div>
+          <div id="background-row-4" class="background-row">
+            <img src="images/Bakgrund_final_31.jpg">
+            <img src="images/Bakgrund_final_32.jpg">
+            <img src="images/Bakgrund_final_33.jpg">
+            <img src="images/Bakgrund_final_34.jpg">
+            <img src="images/Bakgrund_final_35.jpg">
+            <img src="images/Bakgrund_final_36.jpg">
+            <img src="images/Bakgrund_final_37.jpg">
+            <img src="images/Bakgrund_final_38.jpg">
+            <img src="images/Bakgrund_final_39.jpg">
+            <img src="images/Bakgrund_final_40.jpg">
+          </div>
+          <div id="background-row-5" class="background-row">
+            <img src="images/Bakgrund_final_41.jpg">
+            <img src="images/Bakgrund_final_42.jpg">
+            <img src="images/Bakgrund_final_43.jpg">
+            <img src="images/Bakgrund_final_44.jpg">
+            <img src="images/Bakgrund_final_45.jpg">
+            <img src="images/Bakgrund_final_46.jpg">
+            <img src="images/Bakgrund_final_47.jpg">
+            <img src="images/Bakgrund_final_48.jpg">
+            <img src="images/Bakgrund_final_49.jpg">
+            <img src="images/Bakgrund_final_50.jpg">
+          </div>
+          <div id="background-row-6" class="background-row">
+            <img src="images/Bakgrund_final_51.jpg">
+            <img src="images/Bakgrund_final_52.jpg">
+            <img src="images/Bakgrund_final_53.jpg">
+            <img src="images/Bakgrund_final_54.jpg">
+            <img src="images/Bakgrund_final_55.jpg">
+            <img src="images/Bakgrund_final_56.jpg">
+            <img src="images/Bakgrund_final_57.jpg">
+            <img src="images/Bakgrund_final_58.jpg">
+            <img src="images/Bakgrund_final_59.jpg">
+            <img src="images/Bakgrund_final_60.jpg">
+          </div>
+          <div id="background-row-7" class="background-row">
+            <img src="images/Bakgrund_final_61.jpg">
+            <img src="images/Bakgrund_final_62.jpg">
+            <img src="images/Bakgrund_final_63.jpg">
+            <img src="images/Bakgrund_final_64.jpg">
+            <img src="images/Bakgrund_final_65.jpg">
+            <img src="images/Bakgrund_final_66.jpg">
+            <img src="images/Bakgrund_final_67.jpg">
+            <img src="images/Bakgrund_final_68.jpg">
+            <img src="images/Bakgrund_final_69.jpg">
+            <img src="images/Bakgrund_final_70.jpg">
+          </div>
+          <div id="background-row-8" class="background-row">
+            <img src="images/Bakgrund_final_71.jpg">
+            <img src="images/Bakgrund_final_72.jpg">
+            <img src="images/Bakgrund_final_73.jpg">
+            <img src="images/Bakgrund_final_74.jpg">
+            <img src="images/Bakgrund_final_75.jpg">
+            <img src="images/Bakgrund_final_76.jpg">
+            <img src="images/Bakgrund_final_77.jpg">
+            <img src="images/Bakgrund_final_78.jpg">
+            <img src="images/Bakgrund_final_79.jpg">
+            <img src="images/Bakgrund_final_80.jpg">
+          </div>
+          <div id="background-row-9" class="background-row">
+            <img src="images/Bakgrund_final_81.jpg">
+            <img src="images/Bakgrund_final_82.jpg">
+            <img src="images/Bakgrund_final_83.jpg">
+            <img src="images/Bakgrund_final_84.jpg">
+            <img src="images/Bakgrund_final_85.jpg">
+            <img src="images/Bakgrund_final_86.jpg">
+            <img src="images/Bakgrund_final_87.jpg">
+            <img src="images/Bakgrund_final_88.jpg">
+            <img src="images/Bakgrund_final_89.jpg">
+            <img src="images/Bakgrund_final_90.jpg">
+          </div>
+          <div id="background-row-10" class="background-row">
+            <img src="images/Bakgrund_final_91.jpg">
+            <img src="images/Bakgrund_final_92.jpg">
+            <img src="images/Bakgrund_final_93.jpg">
+            <img src="images/Bakgrund_final_94.jpg">
+            <img src="images/Bakgrund_final_95.jpg">
+            <img src="images/Bakgrund_final_96.jpg">
+            <img src="images/Bakgrund_final_97.jpg">
+            <img src="images/Bakgrund_final_98.jpg">
+            <img src="images/Bakgrund_final_99.jpg">
+            <img src="images/Bakgrund_final_100.jpg">
+          </div>
+        </div>
       </div>
 
       <div id="embroidery">
         <div class="center-parent">
           <img src="assets/objects/embroidery-01.png">
-          <p>Lilith & Venus are two godesses. Venus stands for beauty and art. Lilith stands for true female power and sexuality. Venus stands is the female archetype for beauty and art. While Lilith is a crazy bich. A graduation project made by <a href="https://www.johannalundberg.nu" target="_blank"> Johanna Lundberg</a> with music by Lithe & Free.</p>
+          <p>
+            Process text blablablabla... A graduation project made by <a href="https://www.johannalundberg.nu" target="_blank"> Johanna Lundberg</a> with music by Lithe & Free.</p>
         </div>
       </div>
 
-      <a id="show-embroidery" href="#">About</a>
+      <a id="show-embroidery" href="#">Process behind</a>
       <div id="menu">
         <div id="sound-button">
           <a id="sound-toggle" href="#">Play sound</a>
@@ -205,7 +265,7 @@
             </li>
           </ol>
         </div>
-        <p style="margin-top: 12px;">The objects and background are made of synthetic materials; like 3d-objects and manipulated stock photos to create an experience of nature in a digital format. Css-animations and different scroll speeds creates an illusion of depth and weight.</p>
+        <p style="margin-top: 12px;">The objects and background are made of synthetic materials; like 3D-objects and manipulated stock photos to create an experience of nature in a digital format. CSS-animations and different scroll speeds creates an illusion of depth and weight.</p>
         
       </div>
       <div id="copyright"><a href="https://www.johannalundberg.nu" target="_blank">&copy; 2019 Digital Garden by Johanna Lundberg</a></div>

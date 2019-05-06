@@ -5,8 +5,8 @@
 }
 
 :root {
-  --background-width: 8000px;
-  --background-height: 8000px;
+  --background-width: 12000px;
+  --background-height: 12000px;
   --font-color: #000;
 }
 
@@ -203,8 +203,8 @@ body.fade {
 #scroller {
   position: absolute;
   z-index: 4;
-  width: 17400px; /*storleken på sidan*0.4 (scroll-hastighet)*/
-  height: 15000px;
+  width: 15425px; /*storleken på sidan*0.4 (scroll-hastighet)*/
+  height: 15650px;
   overflow: hidden;
 }
 
@@ -235,11 +235,81 @@ body.fade {
 }
 
 .target-block {
-  background:red;
+  /*background:red;*/
   width: 100px;
   height: 100px;
   position: absolute;
 }
+
+/*fence start*/
+#fence-block{
+  position: absolute;
+  top: 35px;
+  left: 35px;
+}
+.fence-corner {
+  width: 500px;
+}
+.fence {
+  width: 1165px; /*fence-corner x 2,33*/
+}
+#fence-top img {
+  position: relative;
+}
+  #fence-top .fence {
+    transform: translate(33px, -44px);
+    margin-left: -4px;
+  }
+  #fence-top .fence-corner {
+    transform: rotate(270deg) translate(16px, 16px);
+  }
+
+#fence-left {
+  width: 1165px;
+  height: 11000px;
+}
+  #fence-left .fence-corner {
+    transform: rotate(180deg) translate(1px, 36px);
+  }
+  #fence-left img {
+    position: relative;
+  }
+  #fence-left .fence {
+    transform: rotate(270deg) translate(371px, -339px);
+    margin-top: 673px;
+  }
+
+#fence-bottom {
+}
+  #fence-bottom .fence-corner {
+    transform: rotate(90deg) translate(630px, -514px);
+    /*bottom: -628px;*/
+  }
+  #fence-bottom img {
+    position: relative;
+  }
+  #fence-bottom .fence {
+    transform: rotate(180deg) translate(-501px, -614px);
+    /*bottom: -611px;*/
+    margin-left: -4px;
+  }
+
+#fence-right {
+  width: 1165px;
+  height: 11000px;
+}
+  #fence-right img {
+    position: relative;
+  }
+  #fence-right .fence {
+    transform: rotate(90deg) translate(-12411px, -11854px);
+    margin-top: 673px;
+  }
+  #fence-right .fence-corner {
+    transform: translate(12181px, -12073px);
+  }
+
+/*fence end*/
 
 #background {
   z-index: 1;
@@ -247,15 +317,30 @@ body.fade {
   width: var(--background-width);
   height: var(--background-height);
   flex-direction: flex-start;
-  background:#fff;
+  background:#eee;
 }
   #background img {
-    width: 100%;
-    height: 100%;
+    width: 1100px;
+    height: 1100px;
     margin:0;
     padding:0;
     margin: -3px;
+    position: relative;
   }
+  .background-row {
+    position: absolute;
+    left: 0;
+  }
+  #background-row-1 {top: 0;}
+  #background-row-2 {top: calc(1*1100px);}
+  #background-row-3 {top: calc(2*1100px);}
+  #background-row-4 {top: calc(3*1100px);}
+  #background-row-5 {top: calc(4*1100px);}
+  #background-row-6 {top: calc(5*1100px);}
+  #background-row-7 {top: calc(6*1100px);}
+  #background-row-8 {top: calc(7*1100px);}
+  #background-row-9 {top: calc(8*1100px);}
+  #background-row-10 {top: calc(9*1100px);}
 
 /* content start*/
 .up-down-animation {
