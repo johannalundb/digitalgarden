@@ -5,7 +5,7 @@
 }
 
 :root {
-  --background-width: 22000px;
+  --background-width: 22000px; /*TO CHANGE BACKGROUND SIZE CHECK THIS + SCROLLER + DIV-SIZE IN INDEX.HTML*/
   --background-height: 22000px;
   --font-color: #000;
 }
@@ -229,6 +229,11 @@ body.fade {
   left: 0;
   bottom: 0;
   overflow: hidden;
+}
+
+.layer-block {
+  width: var(--background-width);
+  height: var(--background-height):;
 }
 
 #layer01 img, #layer02 img{

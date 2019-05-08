@@ -36,6 +36,9 @@ var audio = function () {
     });
   };
 
+    var headTrack = document.getElementById("music");
+    headTrack.volume = 0.5;
+
   var audioStop = function (func) {
     if (curAudioSrc !== null) {
       console.log('audioStop: src=' + curAudioSrc);
