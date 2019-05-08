@@ -5,8 +5,8 @@
 }
 
 :root {
-  --background-width: 12000px;
-  --background-height: 12000px;
+  --background-width: 22000px;
+  --background-height: 22000px;
   --font-color: #000;
 }
 
@@ -66,7 +66,6 @@ body.fade {
     font-family: 'Oroban-Masuria';
     font-size: 13pt;
     margin: 10px 15px 10px 15px;
-
   }
 
   .active {
@@ -159,38 +158,53 @@ body.fade {
   display: flex;
   justify-content: center;
 }
+
 #embroidery {
   position: absolute;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
-  background:rgba(0,0,0, 0.6);
+  background:rgba(0,0,0, 0.25);
   z-index: 5;
   display: none;
   pointer-events: none;
 }
   #embroidery img {
-    height: 85vh;
-    max-height: 1120px;
-    margin-top:2vh;
+    height: 68vh;
+    margin-top: 5.5vh;
+    z-index: 6;
+  }
+
+  #embroidery p, #embroidery h1 {
+    font-family: 'Oroban-Masuria';
+    text-align: center;
+    
   }
   #embroidery p {
-    width: 800px;
-    font-family: 'Oroban-Masuria';
-    font-size: 17pt;
+    font-size: 13pt;
     line-height: 18pt;
-    text-align: center;
-    color: white;
+  }
+  #embroidery h1 {
+    font-size: 16pt;
+    margin-bottom: 20px;
+    margin-top:12px;
+    
+  }
+  #scroll-box {
+    height: 21vh;
     position: absolute;
-    margin-top:85vh;
-    /*background: rgba(255,255,255, 0.6);*/
-    padding: 15px;
-  }
-  #embroidery a {
-    color: white;
+    /*background: red;*/
+    width: 550px;
+    bottom:5vh;
     pointer-events: auto;
+    overflow: scroll;
+
   }
+  ::-webkit-scrollbar { 
+    display: none; 
+}
+
 #wrapper {
   position: absolute;
   z-index: 4;
@@ -203,8 +217,8 @@ body.fade {
 #scroller {
   position: absolute;
   z-index: 4;
-  width: 15425px; /*storleken på sidan*0.4 (scroll-hastighet)*/
-  height: 15650px;
+  width: 22600px; /*storleken på sidan*0.4 (scroll-hastighet)*/
+  height: 22900px;
   overflow: hidden;
 }
 
@@ -282,15 +296,14 @@ body.fade {
 #fence-bottom {
 }
   #fence-bottom .fence-corner {
-    transform: rotate(90deg) translate(630px, -514px);
+    transform: rotate(90deg) translate(6456px, -516px);
     /*bottom: -628px;*/
   }
   #fence-bottom img {
     position: relative;
   }
   #fence-bottom .fence {
-    transform: rotate(180deg) translate(-501px, -614px);
-    /*bottom: -611px;*/
+    transform: rotate(180deg) translate(-503px, -6439px);
     margin-left: -4px;
   }
 
@@ -302,11 +315,11 @@ body.fade {
     position: relative;
   }
   #fence-right .fence {
-    transform: rotate(90deg) translate(-12411px, -11854px);
+    transform: rotate(90deg) translate(-12411px, -17681px);
     margin-top: 673px;
   }
   #fence-right .fence-corner {
-    transform: translate(12181px, -12073px);
+    transform: translate(18008px, -12073px);
   }
 
 /*fence end*/
@@ -320,8 +333,8 @@ body.fade {
   background:#eee;
 }
   #background img {
-    width: 1100px;
-    height: 1100px;
+    width: 1500px;
+    height: 1500px;
     margin:0;
     padding:0;
     margin: -3px;
@@ -332,15 +345,15 @@ body.fade {
     left: 0;
   }
   #background-row-1 {top: 0;}
-  #background-row-2 {top: calc(1*1100px);}
-  #background-row-3 {top: calc(2*1100px);}
-  #background-row-4 {top: calc(3*1100px);}
-  #background-row-5 {top: calc(4*1100px);}
-  #background-row-6 {top: calc(5*1100px);}
-  #background-row-7 {top: calc(6*1100px);}
-  #background-row-8 {top: calc(7*1100px);}
-  #background-row-9 {top: calc(8*1100px);}
-  #background-row-10 {top: calc(9*1100px);}
+  #background-row-2 {top: calc(1*1500px);}
+  #background-row-3 {top: calc(2*1500px);}
+  #background-row-4 {top: calc(3*1500px);}
+  #background-row-5 {top: calc(4*1500px);}
+  #background-row-6 {top: calc(5*1500px);}
+  #background-row-7 {top: calc(6*1500px);}
+  #background-row-8 {top: calc(7*1500px);}
+  #background-row-9 {top: calc(8*1500px);}
+  #background-row-10 {top: calc(9*1500px);}
 
 /* content start*/
 .up-down-animation {

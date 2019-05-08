@@ -7,10 +7,11 @@ var audio = function () {
    * viewport will be played.
    */
   var points = [
-    {x: 0, y: -2000, src: "assets/sound/background-crickets.mp3"},
-    {x: -8159, y: -4741, src: "assets/sound/background-above-water.mp3"},
-    {x: -7000, y: -18000, src: "assets/sound/background-birds.mp3"},
-    {x: -3000, y: -9000, src: "assets/sound/background-below-water.mp3"},
+    {x: 0, y: -2000, src: "assets/sound/BG_Crickets.mp3"},
+    {x: -8159, y: -4741, src: "assets/sound/BG_Stream Bubbles.mp3"},
+    {x: -7000, y: -18000, src: "assets/sound/BG_Birds.mp3"},
+    {x: -3000, y: -9000, src: "assets/sound/BG_Underwater.mp3"},
+    {x: -20000, y: -20000, src: "assets/sound/BG_Desert Winds.mp3"},
   ];
 
   /* Other internal variables. */
@@ -126,8 +127,8 @@ var audio = function () {
 $(document).ready(function(){
   var myScroll = new IScroll('#wrapper', {
     probeType: 3,
-    startY: -6682,
-    startX: -10794,
+    startY: -12000,
+    startX: -12000,
     scrollY: true,
     scrollX: true,
     mouseWheel: true,
@@ -153,6 +154,7 @@ $(document).ready(function(){
       speedRatioX: 0.6
     }]
   });
+
 
 
   // Start audio.
