@@ -8,6 +8,7 @@
   --background-width: 22000px; /*TO CHANGE BACKGROUND SIZE CHECK THIS + SCROLLER + DIV-SIZE IN INDEX.HTML*/
   --background-height: 22000px;
   --font-color: #000;
+  --font-size: 13pt;
 }
 
 @font-face {
@@ -22,6 +23,7 @@
 p, a {
   text-decoration: none;
   color: var(--font-color);
+  font-family: 'Oroban-Masuria';
 }
 
 body {
@@ -30,14 +32,17 @@ body {
   font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
   opacity: 1;
-  transition: 1.7s opacity;
+  transition: 1.7s opacity; /*längd på fade-animation*/
   font-variant-ligatures: none;
+  background:#606060;
 }
+
 
 body.fade {
     opacity: 0;
     transition: none;
 }
+
 
 /* info-box, menu, copyright start*/
 #menu, #copyright {
@@ -52,19 +57,19 @@ body.fade {
     color: var(--font-color);
     margin-left: 10px;
     font-family: 'Oroban-Masuria';
-    font-size: 13pt;
+    font-size: var(--font-size);
   }
 
   #menu a:hover {
     text-decoration: underline;  
   }
 
-  #show-embroidery {
+  #show-credits {
     left:0;
     position: absolute;
     z-index: 4;
     font-family: 'Oroban-Masuria';
-    font-size: 13pt;
+    font-size: var(--font-size);
     margin: 10px 15px 10px 15px;
   }
 
@@ -91,12 +96,12 @@ body.fade {
   }
     #info-box p {
       font-family: 'Oroban-Masuria';
-      font-size: 13pt;
+      font-size: var(--font-size);
       line-height: 15pt;
     }
     #info-box li {
       font-family: 'Oroban-Masuria';
-      font-size: 13pt;
+      font-size: var(--font-size);
       line-height: 15pt;
       color: var(--font-color);
     }
@@ -116,7 +121,7 @@ body.fade {
       margin: 0;
       padding: 0;
       font-family: 'Oroban-Masuria';
-      font-size: 13pt;
+      font-size: var(--font-size);
       line-height: 15pt;
     }
 
@@ -159,7 +164,7 @@ body.fade {
   justify-content: center;
 }
 
-#embroidery {
+#credits {
   position: absolute;
   top: 0;
   left: 0;
@@ -170,22 +175,22 @@ body.fade {
   display: none;
   pointer-events: none;
 }
-  #embroidery img {
+  #credits img {
     height: 68vh;
     margin-top: 5.5vh;
     z-index: 6;
   }
 
-  #embroidery p, #embroidery h1 {
+  #credits p, #credits h1 {
     font-family: 'Oroban-Masuria';
     text-align: center;
     
   }
-  #embroidery p {
-    font-size: 13pt;
+  #credits p {
+    font-size: var(--font-size);
     line-height: 18pt;
   }
-  #embroidery h1 {
+  #credits h1 {
     font-size: 16pt;
     margin-bottom: 20px;
     margin-top:12px;
@@ -229,6 +234,8 @@ body.fade {
   left: 0;
   bottom: 0;
   overflow: hidden;
+  transition: 5s opacity;
+  opacity: 1;
 }
 
 .layer-block {
@@ -243,7 +250,13 @@ body.fade {
 
 #layer01 {
   z-index: 2;
+  opacity: 1;
+  transition: 10s opacity;
 }
+  #layer01.fade {
+  opacity: 0;
+  transition: none;
+  }
 #layer02 {
   z-index: 3;
 }
@@ -392,12 +405,36 @@ body.fade {
 #music {
   visibility: hidden;
 }
-
+@media only screen and (max-width: 1366px) { /*Mindre skärm, macbook 13"*/
+  :root {
+  --font-size: 12pt;
+  }
+  #copyright a {
+    font-size: 9pt;
+  }
+}
 
 @media only screen and (max-width: 600px) {
-  #menu, #copyright, #embroidery {
+  #menu, #copyright, #credits, #show-credits {
     display: none;
   }
+  .block {
+    display: none;
+  }
+  #mobile {
+    width: 100vw;
+    height: 100vh;
+    background:#606060;
+    z-index: 7;
+    position: absolute;
+  }
+    #mobile p {
+      color:white;
+      font-size: 15pt;
+      font-family: 'Oroban-Masuria';
+      padding: 20px;
+    }
+
   }
 
 

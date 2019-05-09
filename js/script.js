@@ -187,24 +187,24 @@ $(document).ready(function(){
 
   $("#show-info").click(function(){
     if ($("#info-box").is(':hidden')) {
-        $("#info-box").show();
+        $("#info-box").fadeIn(600);
         $("#show-info").addClass("active");
     }
     else {
-      $("#info-box").hide();
+      $("#info-box").fadeOut(300);
       $("#show-info").removeClass("active");
     }
   });
 
-  $("#show-embroidery").click(function(){
-    if ($("#embroidery").is(':hidden')) {
-        $("#embroidery").show();
-        $("#show-embroidery").addClass("active");
+  $("#show-credits").click(function(){
+    if ($("#credits").is(':hidden')) {
+        $("#credits").fadeIn(600);
+        $("#show-credits").addClass("active");
         // $("#info-box").hide();
     }
     else {
-      $("#embroidery").hide();
-      $("#show-embroidery").removeClass("active");
+      $("#credits").fadeOut(600);
+      $("#show-credits").removeClass("active");
     }
   });
 
