@@ -7,11 +7,11 @@ var audio = function () {
    * viewport will be played.
    */
   var points = [
-    {x: 0, y: -2000, src: "assets/sound/BG_Crickets.mp3"},
-    {x: -8159, y: -4741, src: "assets/sound/BG_Stream Bubbles.mp3"},
-    {x: -7000, y: -18000, src: "assets/sound/BG_Birds.mp3"},
-    {x: -3000, y: -9000, src: "assets/sound/BG_Underwater.mp3"},
-    {x: -20000, y: -20000, src: "assets/sound/BG_Desert Winds.mp3"},
+    {x: -3300, y: -5000, src: "assets/sound/BG_Crickets.mp3"},
+    {x: -2000, y: -1500, src: "assets/sound/BG_Birds.mp3"},
+    {x: -16000, y: -15000, src: "assets/sound/BG_Stream Bubbles.mp3"},
+    {x: -19600, y: -19000, src: "assets/sound/BG_Underwater.mp3"},
+    {x: -3000, y: -19000, src: "assets/sound/BG_Desert Winds.mp3"},
   ];
 
   /* Other internal variables. */
@@ -130,8 +130,8 @@ var audio = function () {
 $(document).ready(function(){
   var myScroll = new IScroll('#wrapper', {
     probeType: 3,
-    startY: -12000,
-    startX: -12000,
+    startY: -8900,
+    startX: -13000,
     scrollY: true,
     scrollX: true,
     mouseWheel: true,
@@ -157,7 +157,8 @@ $(document).ready(function(){
       speedRatioX: 0.6
     }]
   });
-
+  $("#background").hide(0).delay(500).fadeIn(2000)
+  // $("#info-box").hide(0).delay(2000).fadeIn(2000)
 
 
   // Start audio.
@@ -177,7 +178,7 @@ $(document).ready(function(){
     // The animation easing could either be: quadratic, circular, back, bounce, elastic.
     myScroll.scrollToElement(
       destination         = target[0],
-      animationDurationMs = 2000,
+      animationDurationMs = 3000,
       targetOffsetX       = 0,
       targetOffsetY       = 0,
       animationEasing     = IScroll.utils.ease.circular);
