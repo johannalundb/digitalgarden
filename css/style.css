@@ -9,6 +9,7 @@
   --background-height: 22000px;
   --font-color: #000;
   --font-size: 13pt;
+  --line-height: 15pt;
 }
 
 @font-face {
@@ -25,6 +26,8 @@ p, a {
   color: var(--font-color);
   font-family: 'Oroban-Masuria';
 }
+p::selection, h1::selection, br::selection, a::selection, li::selection, ol::selection { 
+  background:white; /*color:#fff;*/ }
 
 body {
   overflow: hidden; /* this is important to prevent the whole page to bounce */
@@ -32,17 +35,16 @@ body {
   font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
   opacity: 1;
-  transition: 1.7s opacity; /*längd på fade-animation*/
+  transition: 1.5s opacity; /*längd på fade-animation*/
   font-variant-ligatures: none;
   background:#606060;
+  user-select: none;
 }
-
 
 body.fade {
     opacity: 0;
     transition: none;
 }
-
 
 /* info-box, menu, copyright start*/
 #menu, #copyright {
@@ -58,6 +60,7 @@ body.fade {
     margin-left: 10px;
     font-family: 'Oroban-Masuria';
     font-size: var(--font-size);
+    user-select: auto;
   }
 
   #menu a:hover {
@@ -85,7 +88,7 @@ body.fade {
 
   #info-box {
     position: absolute;
-    width: 280px;
+    width: 238px;
     height:auto;
     background: rgba(255,255,255, 0.6);
     z-index:4;
@@ -97,12 +100,14 @@ body.fade {
     #info-box p {
       font-family: 'Oroban-Masuria';
       font-size: var(--font-size);
-      line-height: 15pt;
+      line-height: var(--line-height);
+      font-variant-ligatures: none;
+      user-select: auto;
     }
     #info-box li {
       font-family: 'Oroban-Masuria';
       font-size: var(--font-size);
-      line-height: 15pt;
+      line-height: var(--line-height);
       color: var(--font-color);
     }
     #info-box #x-button {
@@ -122,7 +127,7 @@ body.fade {
       padding: 0;
       font-family: 'Oroban-Masuria';
       font-size: var(--font-size);
-      line-height: 15pt;
+      line-height: var(--line-height);
     }
 
     ol > li {
@@ -184,22 +189,22 @@ body.fade {
   #credits p, #credits h1 {
     font-family: 'Oroban-Masuria';
     text-align: center;
-    
+    font-variant-ligatures: none;  
+    user-select: auto;  
   }
   #credits p {
     font-size: var(--font-size);
-    line-height: 18pt;
+    line-height: 16pt;
   }
   #credits h1 {
     font-size: 16pt;
-    margin-bottom: 20px;
+    margin-bottom: 14px;
     margin-top:12px;
     
   }
   #scroll-box {
-    height: 21vh;
+    height: 150px;
     position: absolute;
-    /*background: red;*/
     width: 550px;
     bottom:5vh;
     pointer-events: auto;
@@ -234,7 +239,6 @@ body.fade {
   left: 0;
   bottom: 0;
   overflow: hidden;
-  transition: 5s opacity;
   opacity: 1;
 }
 
@@ -250,13 +254,8 @@ body.fade {
 
 #layer01 {
   z-index: 2;
-  opacity: 1;
-  transition: 10s opacity;
 }
-  #layer01.fade {
-  opacity: 0;
-  transition: none;
-  }
+
 #layer02 {
   z-index: 3;
 }
@@ -342,38 +341,158 @@ body.fade {
 
 /*fence end*/
 
+.row {
+    position: absolute;
+  }
+
 #background {
   z-index: 1;
-  display: inline-flex;
+  display: inline-block;
   width: var(--background-width);
   height: var(--background-height);
-  flex-direction: flex-start;
-  background:#eee;
 }
   #background img {
     width: 1500px;
     height: 1500px;
-    margin:0;
-    padding:0;
     margin: -3px;
     position: relative;
   }
-  .background-row {
-    position: absolute;
-    left: 0;
-  }
-  #background-row-1 {top: 0;}
-  #background-row-2 {top: calc(1*1500px);}
-  #background-row-3 {top: calc(2*1500px);}
-  #background-row-4 {top: calc(3*1500px);}
-  #background-row-5 {top: calc(4*1500px);}
-  #background-row-6 {top: calc(5*1500px);}
-  #background-row-7 {top: calc(6*1500px);}
-  #background-row-8 {top: calc(7*1500px);}
-  #background-row-9 {top: calc(8*1500px);}
-  #background-row-10 {top: calc(9*1500px);}
+  
+  #background .row-1 {top: 0;}
+  #background .row-2 {top: calc(1*1500px);}
+  #background .row-3 {top: calc(2*1500px);}
+  #background .row-4 {top: calc(3*1500px);}
+  #background .row-5 {top: calc(4*1500px);}
+  #background .row-6 {top: calc(5*1500px);}
+  #background .row-7 {top: calc(6*1500px);}
+  #background .row-8 {top: calc(7*1500px);}
+  #background .row-9 {top: calc(8*1500px);}
+  #background .row-10 {top: calc(9*1500px);}
 
 /* content start*/
+
+/*FOUNTAIN OF SHELLS*/
+#target-fountain-of-shells {
+  top: 4300px;
+  left: 12800px;
+}
+#fountain-of-shells-block {
+  top: 3000px;
+  left: 12500px;
+  position: absolute;
+  width: 2000px;
+}
+  #fountain-of-shells-block img {
+    position: relative;
+    margin: -3px;
+    height: 1000px;
+  }
+  #fountain-of-shells-block .row-1 {transform: translateY(0px);}
+  #fountain-of-shells-block .row-2 {transform: translateY(1000px);}
+  #fountain-of-shells-block .row-3 {transform: translateY(2000px);}
+
+
+/*SMALL FOUNTAIN OF SHELLS*/
+#target-small-fountain-of-shells {
+  top:4000px;
+  left:18300px;
+}
+#small-fountain-of-shells-block {
+  top: 3000px;
+  left: 15000px;
+  position: absolute;
+  width: 2000px;
+}
+  #small-fountain-of-shells-block img {
+    position: relative;
+    margin: -3px;
+    height: 300px;
+  }
+  #small-fountain-of-shells-block .row-1 {transform: translateY(0px);}
+  #small-fountain-of-shells-block .row-2 {transform: translateY(300px);}
+  #small-fountain-of-shells-block .row-3 {transform: translateY(600px);}
+
+/*PEARL SHELL METAL STEAM*/
+#target-metal-steam {
+  top: 13800px;
+  left: 15000px;
+}
+#shell-metal-steam-top, #shell-metal-steam-bottom {
+  width: 1500px;
+  left: 12000px;
+}
+#shell-metal-steam-top {
+  top: 11000px;
+}
+#shell-metal-steam-bottom {
+  top: 13400px; /*2400+top*/
+}
+
+/*SAND TRAIL*/
+#trail-block {
+  top: 7000px;
+  left: 5000px;
+  position: absolute;
+  width: 10000px;
+}
+  #trail-block img {
+    position: relative;
+    margin: -3px;
+    height: 1500px;
+  }
+  #trail-block .row-1 {transform: translateY(0px);}
+  #trail-block .row-2 {transform: translateY(1500px);}
+  #trail-block .row-3 {transform: translateY(3000px);}
+  #trail-block .row-4 {transform: translateY(4500px);}
+
+/*SHELL CHAIN*/
+
+#target-metal-chain {
+  top: 4000px;
+  left: 7000px;
+}
+#shell-chain-block {
+  top: 4000px;
+  left: 7000px;
+  position: absolute;
+  width: 2000px;
+}
+  #shell-chain-block img {
+    position: relative;
+    margin: -3px;
+    height: 700px;
+  }
+  #shell-chain-block .row-1 {transform: translateY(0px);}
+  #shell-chain-block .row-2 {transform: translateY(700px);}
+  #shell-chain-block .row-3 {transform: translateY(1400px);}
+
+#target-fountain-of-lilies {
+  top: 7400px;
+  left: 3500px;
+}
+#fountain-of-lilies {
+  top: 7000px;
+  left: 3000px;
+  position: absolute;
+  width: 2000px;
+}
+  #fountain-of-lilies img {
+    position: relative;
+    margin: -3px;
+    height: 800px;
+  }
+  #fountain-of-lilies .row-1 {transform: translateY(0px);}
+  #fountain-of-lilies .row-2 {transform: translateY(800px);}
+  #fountain-of-lilies .row-3 {transform: translateY(1600px);}
+  #fountain-of-lilies .row-4 {transform: translateY(2400px);}
+
+#green-thingy-shell {
+  width: 2000px;
+  left: 2000px;
+  top: 19000px  ;
+}
+
+
 .up-down-animation {
   animation-name: up-down;
   animation-duration: 2.5s;
@@ -400,6 +519,9 @@ body.fade {
   100% {transform: translateY(20px);}
 }
 
+#mobile {
+  display: none;
+}
 /* content end*/
 
 #music {
@@ -407,11 +529,20 @@ body.fade {
 }
 @media only screen and (max-width: 1366px) { /*Mindre skärm, macbook 13"*/
   :root {
-  --font-size: 12pt;
+  --font-size: 11pt;
+  --line-height: 13pt;
   }
   #copyright a {
     font-size: 9pt;
   }
+  #scroller {
+  width: 22900px; /*storleken på sidan*0.4 (scroll-hastighet)*/
+  height: 23050px;
+  }
+  #info-box {
+    width: 226px;
+  }
+
 }
 
 @media only screen and (max-width: 600px) {
@@ -427,6 +558,7 @@ body.fade {
     background:#606060;
     z-index: 7;
     position: absolute;
+    display: block;
   }
     #mobile p {
       color:white;
@@ -434,6 +566,9 @@ body.fade {
       font-family: 'Oroban-Masuria';
       padding: 20px;
     }
+  #credits p {
+    line-height: 15pt;
+  }
 
   }
 
