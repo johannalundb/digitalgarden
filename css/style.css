@@ -26,6 +26,8 @@ p, a {
   color: var(--font-color);
   font-family: 'Oroban-Masuria';
 }
+
+
 p::selection, h1::selection, br::selection, a::selection, li::selection, ol::selection { 
   background:white; /*color:#fff;*/ }
 
@@ -182,7 +184,7 @@ body.fade {
 }
   #credits img {
     height: 68vh;
-    margin-top: 5.5vh;
+    margin-top: 4.5vh;
     z-index: 6;
   }
 
@@ -195,21 +197,24 @@ body.fade {
   #credits p {
     font-size: var(--font-size);
     line-height: 16pt;
+    margin-bottom: 8pt;
   }
   #credits h1 {
     font-size: 16pt;
     margin-bottom: 14px;
-    margin-top:12px;
-    
+    margin-top:5px;
   }
+
+.line-break {
+  margin-top: 5pt;
+}
   #scroll-box {
-    height: 150px;
+    height: 22vh;
     position: absolute;
     width: 550px;
     bottom:5vh;
     pointer-events: auto;
     overflow: scroll;
-
   }
   ::-webkit-scrollbar { 
     display: none; 
@@ -428,22 +433,41 @@ body.fade {
   top: 13400px; /*2400+top*/
 }
 
-/*SAND TRAIL*/
-#trail-block {
+/*SAND TRAIL 1*/
+#trail-block-1 {
   top: 7000px;
   left: 5000px;
   position: absolute;
   width: 10000px;
+  opacity: 0.9;
 }
-  #trail-block img {
+  #trail-block-1 img {
     position: relative;
-    margin: -3px;
-    height: 1500px;
+    margin: -2px;
+    height: 2000px;
   }
-  #trail-block .row-1 {transform: translateY(0px);}
-  #trail-block .row-2 {transform: translateY(1500px);}
-  #trail-block .row-3 {transform: translateY(3000px);}
-  #trail-block .row-4 {transform: translateY(4500px);}
+  #trail-block-1 .row-1 {transform: translateY(0px);}
+  #trail-block-1 .row-2 {transform: translateY(2000px);}
+  #trail-block-1 .row-3 {transform: translateY(4000px);}
+  #trail-block-1 .row-4 {transform: translateY(6000px);}
+
+#trail-block-2 {
+  top: 5000px;
+  left: 6000px;
+  /*transform: rotate(90deg);*/
+  position: absolute;
+  width: 10000px;
+  opacity: 0.9;
+}
+  #trail-block-2 img {
+    position: relative;
+    margin: -2px;
+    height: 2000px;
+  }
+  #trail-block-2 .row-1 {transform: translateY(0px);}
+  #trail-block-2 .row-2 {transform: translateY(2000px);}
+  #trail-block-2 .row-3 {transform: translateY(4000px);}
+  #trail-block-2 .row-4 {transform: translateY(6000px);}
 
 /*SHELL CHAIN*/
 
@@ -542,23 +566,15 @@ body.fade {
   #info-box {
     width: 226px;
   }
+  #scroll-box {
+      /*height: 150px;*/
+    }
 
 }
 
 @media only screen and (max-width: 600px) {
-  #menu, #copyright, #credits, #show-credits {
+  #menu, #credits, #show-credits, #info-box {
     display: none;
-  }
-  .block {
-    display: none;
-  }
-  #mobile {
-    width: 100vw;
-    height: 100vh;
-    background:#606060;
-    z-index: 7;
-    position: absolute;
-    display: block;
   }
     #mobile p {
       color:white;
@@ -566,9 +582,12 @@ body.fade {
       font-family: 'Oroban-Masuria';
       padding: 20px;
     }
-  #credits p {
-    line-height: 15pt;
-  }
+    #credits p {
+      line-height: 15pt;
+    }
+    
+
+
 
   }
 
