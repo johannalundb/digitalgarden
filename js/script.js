@@ -7,11 +7,10 @@ var audio = function () {
    * viewport will be played.
    */
   var points = [
-    {x: -3300, y: -5000, src: "assets/sound/BG_Crickets.mp3"},
-    {x: -2000, y: -1500, src: "assets/sound/BG_Birds.mp3"},
-    {x: -16000, y: -15000, src: "assets/sound/BG_Stream Bubbles.mp3"},
-    {x: -19600, y: -19000, src: "assets/sound/BG_Underwater.mp3"},
-    {x: -3000, y: -19000, src: "assets/sound/BG_Desert Winds.mp3"},
+    {x: 0, y: -2000, src: "assets/sound/background-crickets.mp3"},
+    {x: -8159, y: -4741, src: "assets/sound/background-above-water.mp3"},
+    {x: -7000, y: -18000, src: "assets/sound/background-birds.mp3"},
+    {x: -3000, y: -9000, src: "assets/sound/background-below-water.mp3"},
   ];
 
   /* Other internal variables. */
@@ -35,9 +34,6 @@ var audio = function () {
       curAudioSrc = src;
     });
   };
-
-    var headTrack = document.getElementById("music");
-    headTrack.volume = 0.5;
 
   var audioStop = function (func) {
     if (curAudioSrc !== null) {
@@ -130,8 +126,8 @@ var audio = function () {
 $(document).ready(function(){
   var myScroll = new IScroll('#wrapper', {
     probeType: 3,
-    startY: -4000, //-4050
-    startX: -18700, //-18700
+    startY: -3752,
+    startX: -18650,
     scrollY: true,
     scrollX: true,
     mouseWheel: true,
@@ -157,12 +153,7 @@ $(document).ready(function(){
       speedRatioX: 0.6
     }]
   });
-  $("#background").hide(0).delay(500).fadeIn(2000)
-  $("#info-box").hide(0).delay(1000).fadeIn(2000)
-  $("#menu").hide(0).delay(2000).fadeIn(2000)
-  $("#small-fountain-of-shells-block").hide(0).delay(3000).fadeIn(2000)
-  $("#show-credits").hide(0).delay(2000).fadeIn(2000)
-  $("#show-info").addClass("active");
+
 
 
   // Start audio.
@@ -182,7 +173,7 @@ $(document).ready(function(){
     // The animation easing could either be: quadratic, circular, back, bounce, elastic.
     myScroll.scrollToElement(
       destination         = target[0],
-      animationDurationMs = 3000,
+      animationDurationMs = 2000,
       targetOffsetX       = 0,
       targetOffsetY       = 0,
       animationEasing     = IScroll.utils.ease.circular);
@@ -192,24 +183,24 @@ $(document).ready(function(){
 
   $("#show-info").click(function(){
     if ($("#info-box").is(':hidden')) {
-        $("#info-box").fadeIn(600);
+        $("#info-box").show();
         $("#show-info").addClass("active");
     }
     else {
-      $("#info-box").fadeOut(300);
+      $("#info-box").hide();
       $("#show-info").removeClass("active");
     }
   });
 
-  $("#show-credits").click(function(){
-    if ($("#credits").is(':hidden')) {
-        $("#credits").fadeIn(600);
-        $("#show-credits").addClass("active");
+  $("#show-embroidery").click(function(){
+    if ($("#embroidery").is(':hidden')) {
+        $("#embroidery").show();
+        $("#show-embroidery").addClass("active");
         // $("#info-box").hide();
     }
     else {
-      $("#credits").fadeOut(600);
-      $("#show-credits").removeClass("active");
+      $("#embroidery").hide();
+      $("#show-embroidery").removeClass("active");
     }
   });
 
