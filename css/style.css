@@ -440,6 +440,7 @@ body.fade {
   position: absolute;
   width: 10000px;
   opacity: 0.9;
+  display: none;
 }
   #trail-block-1 img {
     position: relative;
@@ -458,6 +459,7 @@ body.fade {
   position: absolute;
   width: 10000px;
   opacity: 0.9;
+  display: none;
 }
   #trail-block-2 img {
     position: relative;
