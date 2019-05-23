@@ -8,8 +8,8 @@
   --background-width: 22000px; /*TO CHANGE BACKGROUND SIZE CHECK THIS + SCROLLER + DIV-SIZE IN INDEX.HTML*/
   --background-height: 22000px;
   --font-color: #000;
-  --font-size: 13pt;
-  --line-height: 15pt;
+  --font-size: 14pt; /*13*/
+  --line-height: 16pt; /*15*/
 }
 
 @font-face {
@@ -200,8 +200,8 @@ body.fade {
     margin-bottom: 8pt;
   }
   #credits h1 {
-    font-size: 16pt;
-    margin-bottom: 14px;
+    font-size: 21pt;
+    margin-bottom: 22px;
     margin-top:5px;
   }
 
@@ -211,7 +211,7 @@ body.fade {
   #scroll-box {
     height: 22vh;
     position: absolute;
-    width: 550px;
+    width: 750px; /*550*/
     bottom:5vh;
     pointer-events: auto;
     overflow: scroll;
