@@ -90,7 +90,7 @@ body.fade {
 
   #info-box {
     position: absolute;
-    width: 238px;
+    width: 270px;
     height:auto;
     background: rgba(255,255,255, 0.6);
     z-index:4;
