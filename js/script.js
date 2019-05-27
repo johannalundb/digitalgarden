@@ -130,7 +130,7 @@ var audio = function () {
 $(document).ready(function(){
   var myScroll = new IScroll('#wrapper', {
     probeType: 3,
-    startY: -4000, //-4050
+    startY: -4050, //-4050
     startX: -18700, //-18700
     scrollY: true,
     scrollX: true,
@@ -158,11 +158,11 @@ $(document).ready(function(){
     }]
   });
   $("#background").hide(0).delay(500).fadeIn(2000)
-  $("#info-box").hide(0).delay(1000).fadeIn(2000)
+  // $("#info-box").hide(0).delay(1000).fadeIn(2000)
   $("#menu").hide(0).delay(2000).fadeIn(2000)
   $("#small-fountain-of-shells-block").hide(0).delay(3000).fadeIn(2000)
   $("#show-credits").hide(0).delay(2000).fadeIn(2000)
-  $("#show-info").addClass("active");
+  // $("#show-info").addClass("active");
 
 
   // Start audio.

@@ -8,8 +8,8 @@
   --background-width: 22000px; /*TO CHANGE BACKGROUND SIZE CHECK THIS + SCROLLER + DIV-SIZE IN INDEX.HTML*/
   --background-height: 22000px;
   --font-color: #000;
-  --font-size: 13pt;
-  --line-height: 15pt;
+  --font-size: 14pt; /*13*/
+  --line-height: 16pt; /*15*/
 }
 
 @font-face {
@@ -72,7 +72,7 @@ body.fade {
   #show-credits {
     left:0;
     position: absolute;
-    z-index: 4;
+    z-index: 5;
     font-family: 'Oroban-Masuria';
     font-size: var(--font-size);
     margin: 10px 15px 10px 15px;
@@ -90,7 +90,7 @@ body.fade {
 
   #info-box {
     position: absolute;
-    width: 238px;
+    width: 270px;
     height:auto;
     background: rgba(255,255,255, 0.6);
     z-index:4;
@@ -200,8 +200,8 @@ body.fade {
     margin-bottom: 8pt;
   }
   #credits h1 {
-    font-size: 16pt;
-    margin-bottom: 14px;
+    font-size: 21pt;
+    margin-bottom: 22px;
     margin-top:5px;
   }
 
@@ -211,7 +211,7 @@ body.fade {
   #scroll-box {
     height: 22vh;
     position: absolute;
-    width: 550px;
+    width: 750px; /*550*/
     bottom:5vh;
     pointer-events: auto;
     overflow: scroll;
@@ -440,6 +440,7 @@ body.fade {
   position: absolute;
   width: 10000px;
   opacity: 0.9;
+  display: none;
 }
   #trail-block-1 img {
     position: relative;
@@ -458,6 +459,7 @@ body.fade {
   position: absolute;
   width: 10000px;
   opacity: 0.9;
+  display: none;
 }
   #trail-block-2 img {
     position: relative;
@@ -491,12 +493,12 @@ body.fade {
   #shell-chain-block .row-3 {transform: translateY(1400px);}
 
 #target-fountain-of-lilies {
-  top: 7400px;
-  left: 3500px;
+  top: 19000px;
+  left: 18000px;
 }
 #fountain-of-lilies {
-  top: 7000px;
-  left: 3000px;
+  top: 19000px;
+  left: 18000px;
   position: absolute;
   width: 2000px;
 }
@@ -510,11 +512,58 @@ body.fade {
   #fountain-of-lilies .row-3 {transform: translateY(1600px);}
   #fountain-of-lilies .row-4 {transform: translateY(2400px);}
 
-#green-thingy-shell {
-  width: 2000px;
-  left: 2000px;
-  top: 19000px  ;
+#target-shell-ripple {
+  top: 10000px;
+  left: 3000px;
 }
+#shell-ripple {
+  top: 10000px;
+  left: 3000px;
+  position: absolute;
+}
+#shell-ripple-reflection {
+  top: 11500px;
+  left: 3000px;
+  position: absolute;
+}
+#shell-ripple img {
+   position: relative;
+    margin: -3px;
+    height: 500px;
+}
+  #shell-ripple .row-1 {transform: translateY(0px);}
+  #shell-ripple .row-2 {transform: translateY(500px);}
+  #shell-ripple .row-3 {transform: translateY(1000px);}
+
+#shell-ripple-reflection img {
+   position: relative;
+    margin: -3px;
+    height: 500px;
+}
+  #shell-ripple-reflection .row-1 {transform: translateY(0px);}
+  #shell-ripple-reflection .row-2 {transform: translateY(500px);}
+  #shell-ripple-reflection .row-3 {transform: translateY(1000px);}
+
+
+
+#target-green-snake-diamond {
+  top: 19000px;
+  left: 2000px;
+}
+#green-snake-diamond {
+  width: 3000px;
+  left: 2000px;
+  top: 19000px ;
+  position: absolute;
+}
+  #green-snake-diamond img {
+    position: relative;
+    margin: -3px;
+    height: 500px;
+  }
+   #green-snake-diamond .row-1 {transform: translateY(0px);}
+   #green-snake-diamond .row-2 {transform: translateY(500px);}
+   #green-snake-diamond .row-3 {transform: translateY(1000px);}
 
 
 .up-down-animation {
