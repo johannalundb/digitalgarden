@@ -8,8 +8,8 @@
   --background-width: 22000px; /*TO CHANGE BACKGROUND SIZE CHECK THIS + SCROLLER + DIV-SIZE IN INDEX.HTML*/
   --background-height: 22000px;
   --font-color: #000;
-  --font-size: 14pt; /*13*/
-  --line-height: 16pt; /*15*/
+  --font-size: 13pt; /*13*/
+  --line-height: 15pt; /*15*/
 }
 
 @font-face {
@@ -399,11 +399,11 @@ body.fade {
 
 /*SMALL FOUNTAIN OF SHELLS*/
 #target-small-fountain-of-shells {
-  top:4000px;
+  top:9000px;
   left:18300px;
 }
 #small-fountain-of-shells-block {
-  top: 3000px;
+  top: 8000px;
   left: 15000px;
   position: absolute;
   width: 2000px;
