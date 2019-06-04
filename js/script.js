@@ -130,7 +130,7 @@ var audio = function () {
 $(document).ready(function(){
   var myScroll = new IScroll('#wrapper', {
     probeType: 3,
-    startY: -4050, //-4050
+    startY: -10000, //-4050
     startX: -18700, //-18700
     scrollY: true,
     scrollX: true,
