@@ -378,12 +378,12 @@ body.fade {
 
 /*FOUNTAIN OF SHELLS*/
 #target-fountain-of-shells {
-  top: 4300px;
-  left: 12800px;
+  top: 1750px;
+  left: 17700px;
 }
 #fountain-of-shells-block {
-  top: 3000px;
-  left: 12500px;
+  top: 1500px;
+  left: 17500px;
   position: absolute;
   width: 2000px;
 }
@@ -474,11 +474,11 @@ body.fade {
 /*SHELL CHAIN*/
 
 #target-metal-chain {
-  top: 4000px;
+  top: 13000px;
   left: 7000px;
 }
 #shell-chain-block {
-  top: 4000px;
+  top: 13000px;
   left: 7000px;
   position: absolute;
   width: 2000px;
@@ -513,17 +513,17 @@ body.fade {
   #fountain-of-lilies .row-4 {transform: translateY(2400px);}
 
 #target-shell-ripple {
-  top: 10000px;
-  left: 3000px;
+  top: 7170px;
+  left: 19000px;
 }
 #shell-ripple {
-  top: 10000px;
-  left: 3000px;
+  top: 7000px;
+  left: 19000px;
   position: absolute;
 }
 #shell-ripple-reflection {
-  top: 11050px;
-  left: 3000px;
+  top: 8050px;
+  left: 19000px;
   position: absolute;
 }
 #shell-ripple img {
