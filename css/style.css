@@ -557,12 +557,11 @@ body.fade {
 }
   #green-snake-diamond img {
     position: relative;
-    margin: -3px;
-    height: 250px;
+    height: 300px;
   }
    #green-snake-diamond .row-1 {transform: translateY(0px);}
-   #green-snake-diamond .row-2 {transform: translateY(250px);}
-   #green-snake-diamond .row-3 {transform: translateY(500px);}
+   #green-snake-diamond .row-2 {transform: translateY(300px);}
+   #green-snake-diamond .row-3 {transform: translateY(600px);}
 
 
 .up-down-animation {
