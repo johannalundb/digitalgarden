@@ -522,27 +522,26 @@ body.fade {
   position: absolute;
 }
 #shell-ripple-reflection {
-  top: 11500px;
+  top: 11050px;
   left: 3000px;
   position: absolute;
 }
 #shell-ripple img {
    position: relative;
-    margin: -3px;
-    height: 500px;
+    height: 350px;
 }
   #shell-ripple .row-1 {transform: translateY(0px);}
-  #shell-ripple .row-2 {transform: translateY(500px);}
-  #shell-ripple .row-3 {transform: translateY(1000px);}
+  #shell-ripple .row-2 {transform: translateY(350px);}
+  #shell-ripple .row-3 {transform: translateY(700px);}
 
 #shell-ripple-reflection img {
    position: relative;
     margin: -3px;
-    height: 500px;
+    height: 350px;
 }
   #shell-ripple-reflection .row-1 {transform: translateY(0px);}
-  #shell-ripple-reflection .row-2 {transform: translateY(500px);}
-  #shell-ripple-reflection .row-3 {transform: translateY(1000px);}
+  #shell-ripple-reflection .row-2 {transform: translateY(350px);}
+  #shell-ripple-reflection .row-3 {transform: translateY(700px);}
 
 
 
