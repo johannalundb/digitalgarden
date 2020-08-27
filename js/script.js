@@ -158,7 +158,7 @@ $(document).ready(function(){
     }]
   });
   $("#background").hide(0).delay(500).fadeIn(2000)
-  // $("#info-box").hide(0).delay(1000).fadeIn(2000)
+  // $(".info-box").hide(0).delay(1000).fadeIn(2000)
   $("#menu").hide(0).delay(2000).fadeIn(2000)
   $("#small-fountain-of-shells-block").hide(0).delay(3000).fadeIn(2000)
   $("#show-credits").hide(0).delay(2000).fadeIn(2000)
@@ -191,12 +191,13 @@ $(document).ready(function(){
   });
 
   $("#show-info").click(function(){
-    if ($("#info-box").is(':hidden')) {
-        $("#info-box").fadeIn(600);
-        $("#show-info").addClass("active");
+    if ($(".info-box").is(':hidden')) {
+        $(".info-box").fadeIn(600);
+        $("#show-info").addClass("active")
+        $("#credits").hide();;
     }
     else {
-      $("#info-box").fadeOut(300);
+      $(".info-box").fadeOut(300);
       $("#show-info").removeClass("active");
     }
   });
@@ -205,7 +206,7 @@ $(document).ready(function(){
     if ($("#credits").is(':hidden')) {
         $("#credits").fadeIn(600);
         $("#show-credits").addClass("active");
-        // $("#info-box").hide();
+        $(".info-box").hide();
     }
     else {
       $("#credits").fadeOut(600);
